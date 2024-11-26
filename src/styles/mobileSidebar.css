@@ -1,0 +1,79 @@
+.mobile-sidebar {
+    position: relative;
+display: none;
+overflow-y: hidden;
+  }
+  
+  .toggle-button {
+    font-size: 1rem;
+    background-color: rgb(211, 12, 12);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    z-index: 98;
+    border-radius: 5px;
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+
+  .msidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid rgb(211, 12, 12);
+    color: white;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 99;
+    padding-top: 60px; 
+  }
+  
+  .msidebar.open {
+    left: 0;
+  }
+  
+
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: rgb(211, 12, 12);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .close-button:focus {
+    outline: none;
+  }
+  
+ 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-sidebar{
+        display: block;
+    }
+    .toggle-button {
+      font-size: 20px;
+      padding: 8px 12px;
+    }
+  }

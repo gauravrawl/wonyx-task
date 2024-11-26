@@ -1,0 +1,29 @@
+.item-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .item-table th, .item-table td {
+    padding: 1px 8px;
+  }
+  
+  .item-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+
+
+  @media (max-width: 768px) {
+    .item-table th, .item-table td {
+      font-size: 14px;
+      padding: 6px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .item-table th, .item-table td {
+      font-size: 12px;
+      padding: 4px;
+    }
+  }
+  

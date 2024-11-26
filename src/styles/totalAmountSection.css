@@ -1,0 +1,161 @@
+.invoice-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    gap: 20px;
+  }
+  
+  .notes-section {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .field textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+  }
+  
+  .summary-section {
+    flex: 1;
+    max-width: 300px;
+  border-top: 2px solid #0b0a0a;
+    padding: 20px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .summary-row input {
+    width: 100px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .summary-row.total {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .summary-row.amount-due {
+    border-top: 2px solid #000000;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group input {
+    width: 70px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-group .refresh-btn {
+   
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .input-group .refresh-btn:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .action-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #00a676;
+    cursor: pointer;
+  }
+  
+  .action-links span:hover {
+    text-decoration: underline;
+  }
+    
+
+
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .invoice-container {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .notes-section, .summary-section {
+      max-width: 100%; /* Full width for each section */
+    }
+  
+    .summary-section {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .field textarea {
+      height: 60px; /* Reduce height on smaller screens */
+    }
+  
+    .summary-row {
+      font-size: 12px; /* Reduce font size for smaller screens */
+    }
+  
+    .summary-row input {
+      width: 80px; /* Reduce input size */
+    }
+  
+    .input-group input {
+      width: 50px; /* Adjust input width for GST */
+    }
+  
+    .input-group .refresh-btn {
+      padding: 5px;
+      font-size: 12px; /* Adjust button size */
+    }
+  
+    .action-links {
+      flex-direction: column; /* Stack links vertically */
+      align-items: flex-start;
+    }
+  
+    .action-links span {
+      margin-bottom: 5px;
+    }
+  }
