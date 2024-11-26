@@ -91,15 +91,12 @@
     font-size: 14px;
   }
   
-  .input-group .refresh-btn:hover {
-    background-color: #e6e6e6;
-  }
-  
+
   .action-links {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-    font-size: 14px;
+    margin-bottom: .9rem;
+    font-size: .8rem;
     color: #00a676;
     cursor: pointer;
   }
@@ -109,18 +106,15 @@
   }
     
 
-
-
-/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
     .invoice-container {
-      flex-direction: column; /* Stack sections vertically */
+      flex-direction: column; 
       align-items: stretch;
       gap: 10px;
     }
   
     .notes-section, .summary-section {
-      max-width: 100%; /* Full width for each section */
+      max-width: 100%;
     }
   
     .summary-section {
@@ -130,28 +124,28 @@
   
   @media (max-width: 480px) {
     .field textarea {
-      height: 60px; /* Reduce height on smaller screens */
+      height: 60px; 
     }
   
     .summary-row {
-      font-size: 12px; /* Reduce font size for smaller screens */
+      font-size: 12px; 
     }
   
     .summary-row input {
-      width: 80px; /* Reduce input size */
+      width: 80px; 
     }
   
     .input-group input {
-      width: 50px; /* Adjust input width for GST */
+      width: 50px; 
     }
   
     .input-group .refresh-btn {
       padding: 5px;
-      font-size: 12px; /* Adjust button size */
+      font-size: 12px; 
     }
   
     .action-links {
-      flex-direction: column; /* Stack links vertically */
+      flex-direction: column; 
       align-items: flex-start;
     }
   

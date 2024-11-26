@@ -1,8 +1,14 @@
+import { useState } from "react";
 import "../styles/invoiceSection.css";
 import InvoiceHeading from "./InvoiceHeading";
 
 const InvoiceHeader = () => {
   const jobDetails = ["Choose job details", 'Washing-122', "Car service-100", "Insurance claim-171", 'Modification-188'];
+  const [invoice, setInvoice] = useState("#0792")
+  const [invoiceDate, setInvoiceDate] = useState("2024-10-03")
+  const [term, setTerm] = useState('cash')
+  const [dueDate, setDueDate] = useState('2024-10-03')
+
   return (
     <>
      <InvoiceHeading/>
@@ -23,7 +29,7 @@ const InvoiceHeader = () => {
         </div>
         <div>
           <h4>Vin no</h4>
-          <input type="text" placeholder="Enter Vin no" />
+          <input type="number" placeholder="Enter Vin no" />
         </div>
         </div>
       </div>
@@ -32,19 +38,19 @@ const InvoiceHeader = () => {
       <div className="invoice-details">
         <div className="invoice-row">
           <label>Invoice</label>
-          <input type="text" value="#0792" readOnly />
+          <input type="text" value={invoice} onChange={(e)=> setInvoice(e.target.value)} />
         </div>
         <div className="invoice-row">
           <label>Invoice Date</label>
-          <input type="date" value="2024-10-03" />
+          <input type="date" value={invoiceDate} onChange={(e)=> setInvoiceDate(e.target.value)}/>
         </div>
         <div className="invoice-row">
           <label>Term</label>
-          <input type="text" value="Cash" readOnly />
+          <input type="text" value={term} onChange={(e)=> setTerm(e.target.value)}/>
         </div>
         <div className="invoice-row">
           <label>Due Date</label>
-          <input type="date" value="2024-10-03" />
+          <input type="date" value={dueDate} onChange={(e)=> setDueDate(e.target.value)}/>
         </div>
       </div>
     </div>

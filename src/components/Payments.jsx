@@ -1,5 +1,5 @@
 
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 import "../styles/payments.css";
 import { useState } from "react";
 
@@ -9,8 +9,7 @@ const PaymentDetails = () => {
   const [number, setNumber] = useState("");
   const [err, setErr] = useState("");
   const[numErr, setNumErr] = useState('')
-
-
+//Email verify
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleEmailChange = (e) => {
@@ -25,7 +24,7 @@ const PaymentDetails = () => {
   };
 
 
-
+//Phone no. check 
   const handleNumberChange = (e) => {
     const value = e.target.value;
     if (!/^\d*$/.test(value)) {
@@ -33,7 +32,8 @@ const PaymentDetails = () => {
       return;
     }
     if(value.length > 10){
-      setNumErr('Only 10 no. allowed')
+      setNumErr('Only 10 digits allowed')
+      return
     }
     setNumber(value);
     setNumErr("");
@@ -60,7 +60,7 @@ const PaymentDetails = () => {
       <div className="bank-details">
     {bankDetails?.map((detail, index) => (
       <div className="bank-data" key={index}>
-        <h4>{detail.label}</h4>
+        <h4>{detail.name}</h4>
         <input type="text" value={detail.value}/>
       </div>
     ))}
@@ -77,7 +77,7 @@ const PaymentDetails = () => {
           </div>
           <div>
             <label>Phone Number</label>
-            <input type="number" max={10} placeholder="Whom this is to" onChange={handleNumberChange} />
+            <input type="number" placeholder="Whom this is to" onChange={handleNumberChange} />
             <p style={{color: 'red', fontSize: '10px'}}>{number.length >= 1 && numErr}</p>
            
           </div>

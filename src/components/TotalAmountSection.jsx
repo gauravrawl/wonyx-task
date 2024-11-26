@@ -17,13 +17,13 @@ const InvoiceSummary = () => {
       <div className="summary-section">
         <div className="summary-row">
           <span>Subtotal</span>
-          <span>$390.00</span>
+          <span>{'400.00'}</span>
         </div>
         <div className="summary-row">
           <span>GST</span>
           <div className="input-group">
-            <input type="text" placeholder="$ 0.00" />
-            <button className="refresh-btn">↻</button>
+            <input type="number " placeholder="$ 0.00" />
+            <button className="refresh-btn"><i className="fa-solid fa-right-left"/></button>
           </div>
         </div>
         <div className="action-links">
@@ -32,15 +32,15 @@ const InvoiceSummary = () => {
         </div>
         <div className="summary-row total">
           <span>Invoice total</span>
-          <span>$400.00</span>
+          <span>${'400.00'}</span>
         </div>
         <div className="summary-row">
           <span>Deposit</span>
-          <input type="text" placeholder="$ 140" />
+          <input type="number" placeholder="$ 140" />
         </div>
         <div className="summary-row amount-due">
           <span>Amount due</span>
-          <span>$260.00 AUD</span>
+          <span>{'$260.00 AUD'}</span>
         </div>
       </div>
     </div>

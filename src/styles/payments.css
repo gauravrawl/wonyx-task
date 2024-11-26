@@ -5,7 +5,6 @@
     flex-direction: column;
     margin: 10px;
     border-radius: 10px;
-
   }
 
 .payment-details-container {
@@ -37,7 +36,6 @@ padding: 1rem;
 text-wrap: nowrap;
   }
   
-
   
   textarea {
     height: 60px;
